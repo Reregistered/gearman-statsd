@@ -1,0 +1,17 @@
+{
+    "name": "gearman-statsd"
+  , "version": "0.0.1"
+  , "description": "gearmand status statsd node job"
+  , "keywords": ["nodejs", "statsd","client","gearman"]
+  , "repository" :
+	  { "type" : "git"
+	    , "url" : "https://github.com/Reregistered/gearman-statsd.git"
+	  }
+  , "author": "Dov Amihod "
+  , "dependencies": {
+    "optimist":"0.3.4"
+  , "statsd-node":"0.0.1"
+}
+  , "main": "client"
+  , "engines": { "node": ">= 0.4.0 < 0.7.0" }
+}
