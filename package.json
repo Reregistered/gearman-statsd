@@ -1,6 +1,6 @@
 {
     "name": "gearman-statsd"
-  , "version": "0.0.1"
+  , "version": "0.0.2"
   , "description": "gearmand status statsd node job"
   , "keywords": ["nodejs", "statsd","client","gearman"]
   , "repository" :

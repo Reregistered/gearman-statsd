@@ -24,13 +24,10 @@ var baseString  = 'gearmand.{functionname}.{param}';
 
 exec('which gearadmin',{env:env},
   function (error, stdout, stderr) {
-    console.log('stdout: ' + stdout);
-    console.log('stderr: ' + stderr);
     if (error !== null) {
       console.log("Gearadmin is not installed on the system");
       return;
     }
-
     ///////////////////////////////////////////////////
     // we are all setup, so start the timer to get the gearmand status
     //var measure = setInterval(statsInterval,sendStatus);
@@ -39,7 +36,6 @@ exec('which gearadmin',{env:env},
   });
 
 function sendStatus(){
-
 
   // read the status
   exec('gearadmin --status',{env:env},
@@ -62,9 +58,9 @@ function sendStatus(){
         while (funcs_stat <  func_stats.length){
 
           var stat_string = func_baseString.replace('{param}', stats[funcs_stat-1]);
-          console.log(stat_string + ' : ' + func_stats[funcs_stat]);
 
-          //stat.guage(stat_string,func_stats[funcs_stat]);
+          //console.log(stat_string + ' : ' + func_stats[funcs_stat]);
+          stat.gauge(stat_string,func_stats[funcs_stat]);
 
           funcs_stat++;
         }
