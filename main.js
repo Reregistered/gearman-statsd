@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-var exec 	= require('child_process').exec
+var exec 	    = require('child_process').exec
   , optimist	= require('optimist')
-  , args 		= optimist.usage('Usage: $0 ')
-      .default('interval', '10000')
-      .argv;
+  , args 		  = optimist.usage('Usage: $0 ')
+    .default('interval', '10000')
+    .argv;
 
 var stat = require('statsd-node')();
 
